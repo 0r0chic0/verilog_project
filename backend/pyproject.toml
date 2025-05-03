@@ -21,7 +21,17 @@ dependencies = [
     "pydantic-settings<3.0.0,>=2.2.1",
     "sentry-sdk[fastapi]<2.0.0,>=1.40.6",
     "pyjwt<3.0.0,>=2.8.0",
-]
+    "torch>=2.7.0+cpu",
+    "transformers>=4.51.0",
+    "huggingface-hub>=0.30.0",
+    "accelerate>=1.6.0",
+    "bitsandbytes @ git+https://github.com/bitsandbytes-foundation/bitsandbytes.git@9315692#egg=bitsandbytes",
+    "intel_extension_for_pytorch>=2.2.0,<2.3.0",
+    ]
+
+[tool.hatch.metadata]
+# allow direct‐URL refs in dependencies
+allow-direct-references = true
 
 [tool.uv]
 dev-dependencies = [
