@@ -9,7 +9,7 @@ dependencies = [
     "email-validator<3.0.0.0,>=2.1.0.post1",
     "passlib[bcrypt]<2.0.0,>=1.7.4",
     "tenacity<9.0.0,>=8.2.3",
-    "pydantic>2.0",
+    "pydantic==2.11.4",
     "emails<1.0,>=0.6",
     "jinja2<4.0.0,>=3.1.4",
     "alembic<2.0.0,>=1.12.1",
@@ -21,7 +21,16 @@ dependencies = [
     "pydantic-settings<3.0.0,>=2.2.1",
     "sentry-sdk[fastapi]<2.0.0,>=1.40.6",
     "pyjwt<3.0.0,>=2.8.0",
-]
+    "torch>=2.7.0",
+    "transformers>=4.51.0",
+    "huggingface-hub>=0.30.0",
+    "accelerate>=1.6.0",
+    "ollama>=0.4.8", 
+    ]
+
+[tool.hatch.metadata]
+# allow direct‐URL refs in dependencies
+allow-direct-references = true
 
 [tool.uv]
 dev-dependencies = [
