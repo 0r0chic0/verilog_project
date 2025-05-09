@@ -41,7 +41,7 @@ const EditBox = ({
 
   // Custom hook to manage AI completions, initialized with the API path and body content
   const { completion, stop, complete } = useCompletion({
-    api: "http://localhost:8000/v1/api/generate",
+    api: "http://localhost:8000/api/v1/generate/",
     body: {
       language: language, // Use the language prop from TextEditorProps
     },
