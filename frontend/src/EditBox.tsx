@@ -140,6 +140,7 @@ const EditBox = ({
   return (
     <Editor
       height="90vh"
+      width="75%"
       defaultLanguage={language}
       defaultValue="// Enter code"
       theme={colorMode === "dark" ? "vs" : "vs-dark"}

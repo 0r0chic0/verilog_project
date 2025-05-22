@@ -13,6 +13,7 @@ import { ApiError, OpenAPI } from "./client"
 import { CustomProvider } from "./components/ui/provider"
 import App from "./App.tsx"
 import { system } from "./theme.tsx"
+import Login from "./routes/login.tsx"
 
 OpenAPI.BASE = import.meta.env.VITE_API_URL
 OpenAPI.TOKEN = async () => {

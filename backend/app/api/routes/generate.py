@@ -53,8 +53,9 @@ def generate(req: GenerateRequest):
     if not req.prompt.strip():
         raise HTTPException(400, "Prompt must not be empty")
     
+    request = req.prompt.strip()
     prompt = (
-        req.prompt.strip()
+        request
         + "\n\n"
         + "// Continue this Verilog code. ONLY output the rest of the code—no comments or explanation.\n"
     )
@@ -63,5 +64,7 @@ def generate(req: GenerateRequest):
         "codeqwen:latest", prompt
     )
     code = response["response"].strip()
+    
+    code = clean_completion(code,request)
 
     return GenerateResponse(text=code)
